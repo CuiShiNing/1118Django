@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StudentList</title>
+</head>
+<body>
+    <h2>Students & Grade List</h2>
+    <ul>
+        {% for student in students %}
+{#            <li>{{ forloop.counter }}：{{ student.s_name }}</li>#}
+{#            <li>{{ forloop.counter0 }}：{{ student.s_name }}</li>#}
+{#            <li>{{ forloop.revcounter }}：{{ student.s_name }}</li>#}
+            <li>{{ forloop.revcounter0 }}：{{ student.s_name }}</li>
+        {% endfor %}
+    </ul>
+    <hr>
+    <ul>
+        {% for grade in grades %}
+            <li>{{ grade.g_name }}</li>
+            {% empty %}
+                <li>班级解散了！</li>
+        {% endfor %}
+    </ul>
+    <hr>
+    <ul>
+        {% for student in students %}
+            {% if forloop.first %}
+                <li style="color: crimson">{{ student.s_name }}</li>
+                {% elif forloop.last %}
+                    <li style="color: aqua">{{ student.s_name }}</li>
+                {% else %}
+                    <li>{{ student.s_name }}</li>
+            {% endif %}
+        {% endfor %}
+
+    </ul>
+{#    单行注释#}
+{# 看不见我吧 哈哈哈 #}
+{#多行注释#}
+{% comment %}
+        {% for student in students %}
+            {% if forloop.first %}
+                <li style="color: crimson">{{ student.s_name }}</li>
+                {% elif forloop.last %}
+                    <li style="color: aqua">{{ student.s_name }}</li>
+                {% else %}
+                    <li>{{ student.s_name }}</li>
+            {% endif %}
+        {% endfor %}
+{% endcomment %}
+</body>
+</html>
