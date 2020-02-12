@@ -13,6 +13,9 @@ urlpatterns = [
     url('^getperson/', views.get_person),
     url('^getorders/', views.get_orders),
     url('^getmaxage/', views.get_max_age),
-    path('zy2index/', views.zy2index),
+    url('^zy22index/', views.zy2index),
+    url('^zy22about/', views.zy2about),
+    url('^zy22listpic/', views.zy2listpic),
+    url('^zy22newlistpic/', views.zy2newlistpic),
 ]
 

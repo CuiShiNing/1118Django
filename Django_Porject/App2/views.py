@@ -91,3 +91,15 @@ def get_max_age(request):
 
 def zy2index(request):
     return render(request, 'zy2index.html')
+
+
+def zy2about(request):
+    return render(request, 'zy2about.html')
+
+
+def zy2listpic(request):
+    return render(request, 'zy2listpic.html')
+
+
+def zy2newlistpic(request):
+    return render(request, 'zy2newslistpic.html')
