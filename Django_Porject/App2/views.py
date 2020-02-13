@@ -103,3 +103,15 @@ def zy2listpic(request):
 
 def zy2newlistpic(request):
     return render(request, 'zy2newslistpic.html')
+
+
+def head(request):
+    context = {
+        'text': '这是主体内容',
+        'food': '这是一个脚部',
+    }
+    return render(request, 'header.html', context=context)
+
+
+def zy2base(request):
+    return render(request, 'zy2base.html')

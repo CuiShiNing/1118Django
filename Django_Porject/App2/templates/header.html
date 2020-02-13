@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+{% load static %}
+{# 需要先加载静态资源资源#}
+{% block header %}
+    {{ block.super }}
+    <h2>这是一个表头</h2>
+{% endblock %}
+
+{% block banner %}
+    <h2>这是一条横幅</h2>
+{% endblock %}
+
+{% block content %}
+    <h2>{{ text }}</h2>
+{% endblock %}
+
+{% block fooder %}
+    <h2>{{ food }}</h2>
+{#    {% include 'zy2index.html' %}#}
+{#    include 效率低一些 不首先考虑 #}
+{% endblock %}
+
+{% block ext_css %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+{% endblock %}

@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'App1', 'App2',
+    'App1', 'App2', 'Article',
 ]
 
 # 中间件
@@ -139,6 +139,6 @@ USE_TZ = False
 
 # 静态文件的配置
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (
+STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
-)
+]

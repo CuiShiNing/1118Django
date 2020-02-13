@@ -5,17 +5,22 @@ from django.urls import path
 from App2 import views
 
 urlpatterns = [
-    url('^getgrade/', views.get_grade),
-    url('^getstudents/', views.get_students),
-    url('^insterperson/', views.inster_people),
-    url('^getpersons/', views.get_persons),
-    url('^addperson/', views.add_person),
-    url('^getperson/', views.get_person),
-    url('^getorders/', views.get_orders),
-    url('^getmaxage/', views.get_max_age),
-    url('^zy22index/', views.zy2index),
-    url('^zy22about/', views.zy2about),
-    url('^zy22listpic/', views.zy2listpic),
-    url('^zy22newlistpic/', views.zy2newlistpic),
+    url(r'^getgrade/', views.get_grade),
+    url(r'^getstudents/', views.get_students),
+    url(r'^insterperson/', views.inster_people),
+    url(r'^getpersons/', views.get_persons),
+    url(r'^addperson/', views.add_person),
+    url(r'^getperson/', views.get_person),
+    url(r'^getorders/', views.get_orders),
+    url(r'^getmaxage/', views.get_max_age),
+    url(r'^zy2base/', views.zy2base),
+    url(r'^zy2index/', views.zy2index),
+    url(r'^zy2about/', views.zy2about),
+    # path(r'zy2about/', views.zy2about, name='zy22about'),
+    url(r'^zy2listpic/', views.zy2listpic),
+    url(r'^zy2newlistpic/', views.zy2newlistpic),
+    url(r'^head/', views.head),
+
+
 ]
 
